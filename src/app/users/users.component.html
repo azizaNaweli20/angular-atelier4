@@ -1,0 +1,22 @@
+<p style="color:red ; text-align:center;"><i>users works!</i></p>
+
+<table class="table">
+<tr><th>id</th>
+    <th>name</th>
+    <th>username</th>
+    <th>email</th>
+</tr>
+<tr *ngFor="let t of  listUsers">
+
+
+    <th>{{t.id}}</th>
+    <th>{{t.name}}</th>
+    <th>{{t.username}}</th>
+    <th>{{t.email}}</th>
+</tr>
+</table>
+<br>
+<input type="text " name=" saisie nb" >
+<br>
+<button (click)="verifier()">verifier</button>
+<h1>todo number :{{alertestock}}</h1>

@@ -1,0 +1,16 @@
+<p style="color:red ; text-align:center;"><i>todo-list</i></p>
+<table class="table">
+<tr><th>id</th>
+    <th>title</th>
+    <th>completed</th>
+</tr>
+<tr *ngFor="let t of  listTodo">
+
+
+    <th>{{t.id}}</th>
+    <th>{{t.title}}</th>
+    <th>{{t.completed}}}}</th>
+</tr>
+</table>
+<button (click)="billan()">billan</button>
+<h1>todo number :{{count}}</h1>
