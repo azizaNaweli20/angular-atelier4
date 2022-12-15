@@ -3,6 +3,7 @@ import { __values } from 'tslib';
 import { todo } from '../core/model/todo';
 
 import { CalculService } from '../services/calcul.service';
+import { TodoService } from '../services/todo.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -12,9 +13,18 @@ import { CalculService } from '../services/calcul.service';
 export class TodoListComponent implements OnInit {
  listTodo!: todo[];
  count!:number;
-  constructor(private serviceCal:CalculService) { }
+  constructor(private serviceCal:CalculService, private todoservice :TodoService) { }
 
   ngOnInit(): void {
+
+    this.todoservice.getTodos().subscribe(
+      data  => {this.listTodo = data;  console.log(data)},
+      error => {alert("Impossible récupérer liste Todos") }
+      );
+      
+
+
+
 
     this.listTodo=[
      
